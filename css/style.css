@@ -1,1 +1,7 @@
-.
+i {
+    color: blueviolet;
+    border: 2px dashed black;
+    border-radius: 20%;
+    background-color: aliceblue;
+
+}
