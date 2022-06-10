@@ -5,3 +5,9 @@ i {
     background-color: aliceblue;
 
 }
+
+.buttonpoke {
+    border: 2px solid violet;
+    color: silver;
+    border-radius: 30%;
+}

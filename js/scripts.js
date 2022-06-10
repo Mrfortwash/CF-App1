@@ -5,7 +5,7 @@
 //     { name: 'Charizard', height: 6, type: ['orange', 'water'] }
 // ];
 
-//displays the list of Pokemon with descriptive text dependent on the Pokemon height.
+// displays the list of Pokemon with descriptive text dependent on the Pokemon height.
 
 // for (let i = 0; i < pokemonList.length; i++) {
 
@@ -45,17 +45,28 @@ let pokemonRepository = (function () {
 })();
 
 
-console.log(pokemonRepository.getAll());
+// console.log(pokemonRepository.getAll());
 
-pokemonRepository.add({ name: 'Kricketune', height: 1, types: ['bug', 'flying'], });
+// pokemonRepository.add({ name: 'Kricketune', height: 1, types: ['bug', 'flying'], });
 
-console.log(pokemonRepository.getAll());
+// console.log(pokemonRepository.getAll());
 
+function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("poke-button")
+    listItem.appendChild(button);
+    pokemonList.appendChild(listItem);
+    button.addEventListener('click', function () {
+        showDetails(pokemon)
+    });
+
+}
+function showDetails(pokemon) {
+    console.log(pokemon);
+}
 pokemonRepository.getAll().forEach(function (pokemon) {
-    if (pokemon.height > 5) {
-        document.write('<p>' + pokemon.name, '(height: ' + pokemon.height + ')-Wow!-that\'s big</p>');
-    } else {
-        document.write('<p>' + pokemon.name, '(height: ' + pokemon.height + ')</p>');
-    }
-});
-
+    pokemonRepository.addListItem(pokemon);
+})
