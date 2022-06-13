@@ -39,10 +39,10 @@ let pokemonRepository = (function () {
         button.addEventListener('click', function () {
             showDetails(pokemon);
         });
-        function loadList() {
-            return fetch(apiUrl).then(function (response) {
-                return response.json();
-            }).then(function (json) {
+        async function loadList() {
+            try {
+                const response = await fetch(apiUrl);
+                const json = await response.json();
                 json.results.forEach(function (item) {
                     let pokemon = {
                         name: item.name,
@@ -50,9 +50,9 @@ let pokemonRepository = (function () {
                     };
                     add(pokemon);
                 });
-            }).catch(function (e) {
+            } catch (e) {
                 console.error(e);
-            })
+            }
         }
 
     }
