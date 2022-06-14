@@ -89,7 +89,7 @@ let pokemonRepository = (function () {
         contentElement.innerText = ('Height: ') + pokemon.height;
 
         let imgElement = document.createElement('img');
-        imgElement.src = pokemon.imageUrl;
+        imgElement.src = 'https://www.pinterest.com/prior1390/pokemon-images/';
 
         modal.appendChild(closeButtonElement);
         modal.appendChild(titleElement);
