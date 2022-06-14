@@ -75,7 +75,7 @@ let pokemonRepository = (function () {
         modal.classList.add('modal');
 
         // Clear all existing modal content
-        modalContainer.innerHTML = "";
+        modalContainer.innerHTML = " ";
 
         let closeButtonElement = document.createElement('button');
         closeButtonElement.classList.add('modal-close');
