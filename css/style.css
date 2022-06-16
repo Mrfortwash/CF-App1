@@ -15,6 +15,7 @@ h1 {
     box-sizing: border-box;
 }
 
+
 div {
     background-color: lightgray;
     padding: 0px 0px;
@@ -69,11 +70,11 @@ ul {
     text-decoration: underline;
 }
 
-#modal-container {
+/* #modal-container {
     display: none;
-}
+} */
 
-#modal-container.is-visible {
+#modal-container {
     position: fixed;
     padding: 20px;
     box-sizing: border-box;
