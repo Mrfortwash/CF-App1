@@ -1,5 +1,8 @@
 Project description
 
+Screen shot of the app:
+ pokemonappscreenshot.PNG
+
 Pokédex is a simple application that displays a list of pokemon to the user. When the user clicks on a Pokemon button, a modal appears that displays additional Pokemon details.
 
 Key Features
