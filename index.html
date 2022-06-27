@@ -1,16 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jsproject1</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="utf-8" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
+    <!--Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a class="navbar-brand" href="https://www.pokemon.com/us/" target="blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+                class="d-inline-block align-top" height="60" alt="Pokemon Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+                        target="blank">More Pokemon</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://Mrfortwash.github.io/Jeremyportfolio-website/"
+                        target="blank">Developer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="https://mrfortwash.github.io/Jeremyportfolio-website/contact.html">Contact</a>
+                </li>
+            </ul>
+            <form class="search-pokemon form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="myInput" type="text" placeholder="Search Pokemon..."
+                    aria-label="Search" onfocus="this.value=''">
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search
+                </button>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Pokemon list -->
+    <ul class="pokemon-list "></ul>
+    <!-- Modal -->
+    <div id="exampleModalLive" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLiveLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This is just a test</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            Top
+        </button>
+    </div>
+    <footer style="position: fixed; bottom: 0; width: 100%" a
+        href="https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg" target="blank">Nintendo,
+        Creatures, Game Freak, en:The Pokémon Company</a>, Public domain, via Wikimedia
+        Commons</footer>
+    <!--Bootstrap JS start -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap JS end -->
+    <!--js script for promise polyfille-->
+    <script src="js/promise-polyfill.js"></script>
+    <!--js script for fetch polyfill-->
+    <script src="js/fetch.js"></script>
+    <!--js script for pokedex listing here-->
     <script src="js/scripts.js"></script>
 </body>
 
